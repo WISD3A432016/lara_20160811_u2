@@ -72,10 +72,12 @@ Route::get('dashboard', function () {
 });
 */
 
+/*
 //Exercise 5-2
 Route::group(['prefix' => 'admin'], function () {
     Route::get('dashboard', function () {
          return 'admin dashboard';
     });
 });
-
+*/
+Route::get('/', ['as' => 'home.index', 'users' =>'HomeController@index']);
