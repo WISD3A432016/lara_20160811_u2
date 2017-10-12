@@ -11,6 +11,7 @@
 |
 */
 
+/* 練習 1：設定 Route 反應
 Route::get('/', function () {
     //Exercise 1-1
     //return 'welcome';
@@ -19,5 +20,11 @@ Route::get('/', function () {
     //return view('welcome');
 
     //Exercise 1-3
-    return redirect('welcome');
+    //return redirect('welcome');
+});
+*/
+
+Route::get('hello/{Ruby}', function ($Ruby) {
+    //Exercise 2-1
+    return 'Hello, ' .$Ruby;
 });
