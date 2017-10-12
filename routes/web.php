@@ -16,5 +16,8 @@ Route::get('/', function () {
     //return 'welcome';
 
     //Exercise 1-2
-    return view('welcome');
+    //return view('welcome');
+
+    //Exercise 1-3
+    return redirect('welcome');
 });
