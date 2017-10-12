@@ -48,22 +48,28 @@ Route::get('ADD NEW/{Route}', function ($Route) {
 
 /*練習4：為 Route 命名
 //Exercise 4-1(延用Exercise 2-3)
+
 Route::get('hello/{Ruby?}', ['as' => 'hello.index', function ($name = 'Everybody') {
     //Exercise 4-1
     return 'Hello, '  .$name;
 }]);
-
 
 /*'練習 4: 測試 hello.index的超連結
 Route::get('/', function () {
     return view('welcome');
 });
 */
-
+/*
 //Exercise 4-3 修改 Route 裡的路徑
 Route::get('say/{Ruby?}', ['as' => 'hello.index', function ($name = 'Everybody') {
     return  view('welcome');
 }]);
+*/
+/*' 練習 5：設定 Route 前置*/
+//Exercise 5-1
+Route::get('dashboard', function () {
+    return 'dashboard';
+});
 
 
 
