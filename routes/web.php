@@ -12,7 +12,7 @@
 */
 
 /* 練習 1：設定 Route 反應
-Route::get('/', function () {
+//Route::get('/', function () {
     //Exercise 1-1
     //return 'welcome';
 
@@ -23,6 +23,7 @@ Route::get('/', function () {
     //return redirect('welcome');
 });
 */
+
 
 
 /* 練習 2：設定 Route 接收參數
@@ -38,10 +39,22 @@ Route::get('hello/{Ruby?}', function ($name = 'Everybody') {
 });
 */
 
-/*練習 3：使用 artisan 指令了解目前 route 內容 */
+/*練習 3：使用 artisan 指令了解目前 route 內容
 Route::get('ADD NEW/{Route}', function ($Route) {
     //Exercise 3-3
     return 'add new , '  .$Route;
 });
+*/
 
+/*練習4：為 Route 命名 */
+//Exercise 4-1(延用Exercise 2-3)
+Route::get('hello/{Ruby?}', ['as' => 'hello.index', function ($name = 'Everybody') {
+    //Exercise 4-1
+    return 'Hello, '  .$name;
+}]);
+
+/*'練習 4: 測試 hello.index的超連結*/
+Route::get('/', function () {
+    return view('welcome');
+});
 
