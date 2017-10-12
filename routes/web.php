@@ -26,5 +26,10 @@ Route::get('/', function () {
 
 Route::get('hello/{Ruby}', function ($Ruby) {
     //Exercise 2-1
-    return 'Hello, ' .$Ruby;
+    //return 'Hello, '  .$Ruby;
+});
+
+Route::get('hello/{Ruby?}', function ($name = 'Everybody') {
+    //Exercise 2-3
+    return 'Hello, '  .$name;
 });
