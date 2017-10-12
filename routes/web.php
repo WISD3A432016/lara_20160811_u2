@@ -24,12 +24,24 @@ Route::get('/', function () {
 });
 */
 
+
+/* 練習 2：設定 Route 接收參數
 Route::get('hello/{Ruby}', function ($Ruby) {
     //Exercise 2-1
     //return 'Hello, '  .$Ruby;
 });
-
+*/
+/*
 Route::get('hello/{Ruby?}', function ($name = 'Everybody') {
     //Exercise 2-3
     return 'Hello, '  .$name;
 });
+*/
+
+/*練習 3：使用 artisan 指令了解目前 route 內容 */
+Route::get('ADD NEW/{Route}', function ($Route) {
+    //Exercise 3-3
+    return 'add new , '  .$Route;
+});
+
+
