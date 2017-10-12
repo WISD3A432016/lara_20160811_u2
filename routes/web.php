@@ -65,11 +65,17 @@ Route::get('say/{Ruby?}', ['as' => 'hello.index', function ($name = 'Everybody')
     return  view('welcome');
 }]);
 */
-/*' 練習 5：設定 Route 前置*/
+/*' 練習 5：設定 Route 前置
 //Exercise 5-1
 Route::get('dashboard', function () {
     return 'dashboard';
 });
+*/
 
-
+//Exercise 5-2
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('dashboard', function () {
+         return 'admin dashboard';
+    });
+});
 
